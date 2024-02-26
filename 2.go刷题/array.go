@@ -47,11 +47,11 @@ func extend(arr []int,extend_length int,) ([] int){
 }
 
 
-// func main() {
-// 	// arr := []int{4, 995, 545, 346}
-// 	// get_value(arr,3)
-// 	// insert_value(arr, 546,2)
-// 	// delete_value(arr, 3)
-// 	// find_value(arr,4)
-// 	// extend(arr,3)
-// }
+func main() {
+	// arr := []int{4, 995, 545, 346}
+	// get_value(arr,3)
+	// insert_value(arr, 546,2)
+	// delete_value(arr, 3)
+	// find_value(arr,4)
+	// extend(arr,3)
+}
