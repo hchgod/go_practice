@@ -15,9 +15,14 @@ func (p *People) get_info() string {
 	return fmt.Sprintf("您的信息如下: \n \t姓名: %s\n \t性别: %s\n \t年龄: %d\n \t地址: %s\n", p.name, p.sex, p.age, p.address)
 }
 
+func (p *People)eat(food string)  {
+	fmt.Printf("%s eat: %s",p.name,food)
+}
+
 func main() {
 	p := People{"Dotbalo", 19,"Man","Russia"}
 	p.get_info()
+	p.eat("西红薯")
 }
 
 
