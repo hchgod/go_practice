@@ -8,8 +8,9 @@ func isHappy(n int) bool {
 	res := make(map[int]bool)
 	for n!=1 && res[n]!=true {
 		res[n] = true
+		n = sum(n)
 	}
-	return true
+	return n==1
 }
 
 func sum(n int) int {
