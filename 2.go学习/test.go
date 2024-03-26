@@ -3,6 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	teacherinfo := make(map[string]int)
-	
+	res := func(a int,b int)bool{
+		if a>b{
+			return true
+		}else{
+			return false
+		}
+	}
+	fmt.Print(res)
+
 }

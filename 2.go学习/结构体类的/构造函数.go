@@ -11,6 +11,8 @@ type People struct {
 	address string
 }
 
+
+// 构造函数
 func (p *People) get_info() string {
 	return fmt.Sprintf("您的信息如下: \n \t姓名: %s\n \t性别: %s\n \t年龄: %d\n \t地址: %s\n", p.name, p.sex, p.age, p.address)
 }

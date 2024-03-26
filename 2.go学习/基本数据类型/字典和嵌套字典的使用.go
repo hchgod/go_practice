@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+import "fmt"    //嵌套的字典
 
 func main() {
 	order1 := map[string]int{
@@ -15,7 +15,7 @@ func main() {
 		"奶茶": 20,
 		"啤酒": 10,
 	}
-	var menu []map[string]int
+	var menu []map[string]int     
 	menu = append(menu, order1, order2, order3)
 	// fmt.Println(menu)
 	for key,value := range menu {

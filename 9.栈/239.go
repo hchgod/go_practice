@@ -24,9 +24,9 @@ func (p *myqueue) back() int {
 
 func (p *myqueue) empty() bool {
 	if len(p.queue) != 0 {
-		return true
-	} else {
 		return false
+	} else {
+		return true
 	}
 }
 

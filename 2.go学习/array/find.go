@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+二分查找
 func binary_find(arr []int, num int) (index int) {
 	i, j := 0, len(arr)
 	for i < j {

@@ -1,5 +1,5 @@
 package main
-
+array 的基本操作
 import (
 	"fmt"
 )
