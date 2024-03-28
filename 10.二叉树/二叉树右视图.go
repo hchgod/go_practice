@@ -30,26 +30,6 @@ func create_tree(nums []int, index int) *TreeNode {
 	return nil
 }
 
-func levelOrder1(root *TreeNode) (res []int) {
-	//是用一维数组表示
-	if root == nil {
-		return res
-	}
-	queue := list.New()
-	queue.PushBack(root)
-	// depth := 0
-	for queue.Len() > 0 {
-		node := queue.Remove(queue.Front()).(*TreeNode)
-		if node == nil {
-			continue
-		}
-		res = append(res, node.Val)
-		queue.PushBack(node.Left)
-		queue.PushBack(node.Right)
-	}
-	return res
-}
-
 func levelOrder2(root *TreeNode) (res [][]int) {
 	//是用二维数组表示
 	if root == nil {
@@ -76,26 +56,17 @@ func levelOrder2(root *TreeNode) (res [][]int) {
 			}
 		}
 	}
-	//reverse(res)    从下向上遍历   [[4 5 6 7] [2 3] [1]]
 	res = right(res)
 	return res
 }
 
-func reverse(res [][]int) {
-	i, j := 0, len(res)-1
-	for i < j {
-		res[i], res[j] = res[j], res[i]
-		i++
-		j--
-	}
-}
 
 func right(res [][]int) [][]int { //右视图
-	 result := [][]int{}
-	 for i := 0; i < len(res); i++ {
-		 result[0] = append(result[0], res[i][len(res[i])-1])
-	 }
-	 return result
+	result := [][]int{}
+	for i := 0; i < len(res); i++ {
+		result[0] = append(result[0], res[i][len(res[i])-1])
+	}
+	return result
 }
 
 func main() {

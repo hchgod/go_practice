@@ -29,7 +29,6 @@ func create_tree(nums []int, index int) *TreeNode {
 }
 
 func levelorder(root *TreeNode) (res [][]int) {
-	
 	depth := 0
 	var order func(root *TreeNode,depth int)
 	order = func(root *TreeNode,depth int) {
