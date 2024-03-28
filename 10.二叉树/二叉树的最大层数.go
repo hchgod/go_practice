@@ -30,7 +30,7 @@ func create_tree(nums []int, index int) *TreeNode {
 	return nil
 }
 
-func levelOrder2(root *TreeNode) (result []int) {
+func max_level(root *TreeNode) (result int) {
 	//是用二维数组表示
 	res := [][]int{}
 	if root == nil {
@@ -38,7 +38,6 @@ func levelOrder2(root *TreeNode) (result []int) {
 	}
 	queue := list.New()
 	queue.PushBack(root)
-	// var tmparr []int
 	depth := 0
 	for ; queue.Len() > 0; depth++ {
 		res = append(res, []int{})
@@ -57,28 +56,13 @@ func levelOrder2(root *TreeNode) (result []int) {
 			}
 		}
 	}
-	result = max(res)
-	return result
-}
-
-
-func max(res [][]int) []int { //最大值
-	result := []int{}
-	for i:=0; i<len(res); i++ {
-		max_value := res[i][0]
-		for j:=0; j<len(res[i]); j++ {
-			if res[i][j] > max_value {
-				max_value = res[i][j]
-			}
-		}
-		result = append(result, max_value)
-	}
+	result = len(res)
 	return result
 }
 
 func main() {
 	nums := []int{1, 2, 3, 4, 5, 6, 7}
 	node := create_tree(nums, 0)
-	res := levelOrder2(node)
+	res := max_level(node)
 	fmt.Print(res)
 }
