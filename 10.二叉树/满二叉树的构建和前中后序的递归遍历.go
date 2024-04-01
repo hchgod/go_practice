@@ -28,6 +28,8 @@ func create_tree(nums []int, index int) *TreeNode {
 	return nil
 }
 
+// 只打印
+
 func preorderTraversal(root *TreeNode, res []int) []int {
 	if root == nil {
 		return res
@@ -58,6 +60,7 @@ func postorderTraversal(root *TreeNode, res []int) []int {
 	return res
 }
 
+//以下为构造函数
 // func (node *TreeNode) preorder() {
 // 	if node == nil {
 // 		return
@@ -66,7 +69,6 @@ func postorderTraversal(root *TreeNode, res []int) []int {
 // 	node.Left.preorder()
 // 	node.Right.preorder()
 // }
-
 // func (node *TreeNode) midorder() {
 // 	if node == nil {
 // 		return
@@ -75,7 +77,6 @@ func postorderTraversal(root *TreeNode, res []int) []int {
 // 	fmt.Println(node.Val)
 // 	node.Right.midorder()
 // }
-
 // func (node *TreeNode) postorder() {
 // 	if node == nil {
 // 		return
@@ -89,7 +90,7 @@ func main() {
 	nums := []int{1, 2, 3, 4, 5, 6, 7}
 	node := create_tree(nums, 0)
 	res := []int{}
-	res = postorderTraversal(node, res)
+	res = preorderTraversal(node,res)
 	fmt.Print(res)
 	// node.preorder()
 }

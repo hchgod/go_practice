@@ -1,5 +1,5 @@
 package main
-
+//   用栈实现遍历
 import (
 	"container/list"
 	"fmt"

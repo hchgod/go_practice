@@ -61,7 +61,7 @@ func max_level(root *TreeNode) (result int) {
 }
 
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6, 7}
+	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	node := create_tree(nums, 0)
 	res := max_level(node)
 	fmt.Print(res)

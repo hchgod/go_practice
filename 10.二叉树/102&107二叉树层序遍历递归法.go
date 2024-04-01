@@ -43,7 +43,7 @@ func levelorder(root *TreeNode) (res [][]int) {
 		order(root.Right,depth+1)
 	}
 	order(root,depth)
-	reverse(res)
+	// reverse(res)
     return res
 }
 
