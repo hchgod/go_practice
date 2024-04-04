@@ -1,0 +1,57 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="37">
+            <item index="0" class="java.lang.String" itemvalue="pbr" />
+            <item index="1" class="java.lang.String" itemvalue="oslo.messaging" />
+            <item index="2" class="java.lang.String" itemvalue="Babel" />
+            <item index="3" class="java.lang.String" itemvalue="keystoneauth1" />
+            <item index="4" class="java.lang.String" itemvalue="oslo.service" />
+            <item index="5" class="java.lang.String" itemvalue="oslo.middleware" />
+            <item index="6" class="java.lang.String" itemvalue="tooz" />
+            <item index="7" class="java.lang.String" itemvalue="oslo.db" />
+            <item index="8" class="java.lang.String" itemvalue="oslo.i18n" />
+            <item index="9" class="java.lang.String" itemvalue="keystonemiddleware" />
+            <item index="10" class="java.lang.String" itemvalue="tenacity" />
+            <item index="11" class="java.lang.String" itemvalue="SQLAlchemy-Utils" />
+            <item index="12" class="java.lang.String" itemvalue="microversion-parse" />
+            <item index="13" class="java.lang.String" itemvalue="oslo.versionedobjects" />
+            <item index="14" class="java.lang.String" itemvalue="jsonschema" />
+            <item index="15" class="java.lang.String" itemvalue="WebOb" />
+            <item index="16" class="java.lang.String" itemvalue="oslo.upgradecheck" />
+            <item index="17" class="java.lang.String" itemvalue="oslo.utils" />
+            <item index="18" class="java.lang.String" itemvalue="stevedore" />
+            <item index="19" class="java.lang.String" itemvalue="iso8601" />
+            <item index="20" class="java.lang.String" itemvalue="taskflow" />
+            <item index="21" class="java.lang.String" itemvalue="oslo.policy" />
+            <item index="22" class="java.lang.String" itemvalue="kafka-python" />
+            <item index="23" class="java.lang.String" itemvalue="oslo.config" />
+            <item index="24" class="java.lang.String" itemvalue="oslo.context" />
+            <item index="25" class="java.lang.String" itemvalue="oslo.log" />
+            <item index="26" class="java.lang.String" itemvalue="retrying" />
+            <item index="27" class="java.lang.String" itemvalue="mock" />
+            <item index="28" class="java.lang.String" itemvalue="pysnmp" />
+            <item index="29" class="java.lang.String" itemvalue="pycryptodome" />
+            <item index="30" class="java.lang.String" itemvalue="python-novaclient" />
+            <item index="31" class="java.lang.String" itemvalue="automaton" />
+            <item index="32" class="java.lang.String" itemvalue="oslo.cache" />
+            <item index="33" class="java.lang.String" itemvalue="oslo.concurrency" />
+            <item index="34" class="java.lang.String" itemvalue="openstacksdk" />
+            <item index="35" class="java.lang.String" itemvalue="lxml" />
+            <item index="36" class="java.lang.String" itemvalue="oslo.privsep" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

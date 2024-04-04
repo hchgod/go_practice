@@ -35,8 +35,8 @@ func reverse_tree(root *TreeNode) (node *TreeNode) {
 		return nil
 	}
 	root.Left, root.Right = root.Right, root.Left
-	reverse_tree(root.Left)
 	reverse_tree(root.Right)
+	reverse_tree(root.Left)
 	return root
 }
 
