@@ -29,17 +29,41 @@ func create_tree(nums []int, index int) *TreeNode {
 	return nil
 }
 
-func defs(root *TreeNode) (node *TreeNode) {
-	//递归版本
-	if root == nil {
-		return nil
+func defs(left *TreeNode,right *TreeNode) bool {
+	if left == nil && right == nil {
+		return true
+	}else if left==nil || right==nil{
+		return false
+	}else if left.Val != right.Val {
+		return false
 	}
-	root.Left, root.Right = root.Right, root.Left
-	reverse_tree(root.Right)
-	reverse_tree(root.Left)
-	return root
+	return defs(left.Left, right.Right) && defs(left.Right,right.Left)
 }
 
+func isSymmetric(root *TreeNode) bool {
+	return defs(root.Left,root.Right)
+}
+
+func isSymmetric1(root *TreeNode) bool {
+	//用队列实现
+    var queue []*TreeNode;
+    if root != nil {
+        queue = append(queue, root.Left, root.Right);
+    }
+    for len(queue) > 0 {
+        left := queue[0];
+        right := queue[1];
+        queue = queue[2:];
+        if left == nil && right == nil {
+            continue;
+        }
+        if left == nil || right == nil || left.Val != right.Val {
+            return false;
+        };
+        queue = append(queue, left.Left, right.Right, right.Left, left.Right);
+    }
+    return true;
+}
 
 
 
@@ -63,9 +87,8 @@ func levelorder(root *TreeNode) (res [][]int) {
 }
 
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6, 7}
+	nums := []int{1, 2, 2, 3, 4, 4, 3}
 	node := create_tree(nums, 0)
-	node = reverse_tree3(node)
-	res := levelorder(node)
+	res := isSymmetric(node)
 	fmt.Print(res)
 }

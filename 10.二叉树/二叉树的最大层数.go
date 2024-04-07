@@ -60,9 +60,26 @@ func max_level(root *TreeNode) (result int) {
 	return result
 }
 
+// 递归方法
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+// 递归
+func maxdepth(root *TreeNode) int {
+	if root == nil {
+		return 0
+	}
+	return max(maxdepth(root.Left), maxdepth(root.Right)) + 1
+}
+
+
 func main() {
 	nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	node := create_tree(nums, 0)
-	res := max_level(node)
+	res := maxdepth(node)
 	fmt.Print(res)
 }
