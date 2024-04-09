@@ -4,11 +4,11 @@ import (
 	"fmt"
 )
 
-func combinationSum3(n int, k int) [][]int {
+func combinationSum3(k int, n int) [][]int {
 	res := [][]int{}
 	list := []int{}
-	var backtracing func(n int, k int, start int)
-	backtracing = func(n int, k int, start int) {
+	var backtracing func(k int, n int, start int)
+	backtracing = func(k int, n int, start int) {
 		if len(list) == k {
 			if sum(list) == n {
 				//fmt.Println(list)
@@ -24,12 +24,12 @@ func combinationSum3(n int, k int) [][]int {
 			}
 			list = append(list, i)
 			// fmt.Println(list)
-			backtracing(n, k, i+1)
+			backtracing(k, n, i+1)
 			list = list[:len(list)-1]
 		}
 		return
 	}
-	backtracing(n, k, 1)
+	backtracing(k, n, 1)
 	return res
 }
 
@@ -43,6 +43,6 @@ func sum(list []int) int {
 
 func main() {
 	n, k := 7, 3
-	res := combinationSum3(n, k)
+	res := combinationSum3(k, n)
 	fmt.Println(res)
 }
