@@ -19,7 +19,7 @@ func combinationSum3(k int, n int) [][]int {
 			return
 		}
 		for i := start; i < 10; i++ {
-			if i >= n { //剪枝
+			if sum(list) > n/2 { //剪枝
 				break
 			}
 			list = append(list, i)
