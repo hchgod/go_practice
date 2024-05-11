@@ -33,7 +33,8 @@ func (u user_1) ConsulTation() {
 }
 
 func main() {
-	user := user_1{"黄昌昊"}
+	var user user_1
+	user = user_1{"黄昌昊"}
 	var vipuser vip_interface
 	vipuser = user
 	vipuser.login()
