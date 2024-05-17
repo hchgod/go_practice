@@ -12,17 +12,19 @@ func partition(candidates string) [][]string {
 	temp := []string{}
 	var backtracing func(start int)
 	backtracing = func(start int) {
-		if isPalindrome(fmt.Sprint(temp)) == true {
+		if start == len(candidates) {
 			copyTemp := make([]string, len(temp))
 			copy(copyTemp, temp) //深copy
-			fmt.Println("copyTemp:",copyTemp)
 			result = append(result, copyTemp)
-			return
+			return 
 		}
 		for i := start; i < len(candidates); i++ {
-			temp = append(temp, string(candidates[i]))
-			backtracing(i+1)
-			temp = temp[:len(temp)-1]
+			str := candidates[start : i+1]              //字符串可以直接切片
+			if isPalindrome(str) {
+				temp = append(temp, str)
+				backtracing(i+1)
+				temp = temp[:len(temp)-1]
+			}
 		}
 	}
 	backtracing(0)
@@ -30,19 +32,16 @@ func partition(candidates string) [][]string {
 }
 
 func isPalindrome(str string) bool {
-	fmt.Println("str is ",str)
 	for i,j := 0,len(str)-1;i<j;i, j = i+1, j-1{
 		if string(str[i]) != string(str[j]){
-			fmt.Println(false)
 			return false
 		}
 	}
-	fmt.Println(true)
 	return true
 }
 
 func main() {
-	a := "aab"
+	a := "aaab"
 	res := partition(a)
 	fmt.Println(res)
 }
