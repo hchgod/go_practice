@@ -14,19 +14,19 @@ func restoreIpAddresses(s string) []string {
 	temp := []string{}
 	var backtracing func(start int)
 	backtracing = func(start int) {
-		if start == len(s)&& len(temp) == 4 {
-			copyTemp := strings.Join(temp,".")
+		if start == len(s) && len(temp) == 4 {
+			copyTemp := strings.Join(temp, ".")
 			result = append(result, copyTemp)
-			return 
+			return
 		}
 		for i := start; i < len(s); i++ {
-			str := s[start : i+1]              //字符串可以直接切片
-			if start != len(s) && len(temp) == 4{
-				return 
+			str := s[start : i+1] //字符串可以直接切片
+			if start != len(s) && len(temp) == 4 {
+				return
 			}
-			if isValid_ip(str) {
+			if isValid_ip(str, temp) {
 				temp = append(temp, str)
-				backtracing(i+1)
+				backtracing(i + 1)
 				temp = temp[:len(temp)-1]
 			}
 		}
@@ -35,14 +35,14 @@ func restoreIpAddresses(s string) []string {
 	return result
 }
 
-func isValid_ip(str string) bool {
+func isValid_ip(str string, temp []string) bool {
 	if str[0] == byte('0') && len(str) != 1 {
-		fmt.Println(string(str[0]))
+		//以0开头的   数字 pass掉
 		return false
 	}
-	value,_ := strconv.Atoi(str)
+	value, _ := strconv.Atoi(str)
 	// fmt.Println("value is :",value)
-	if value>255  || value<0{
+	if value > 255 || value < 0 {
 		return false
 	}
 	return true

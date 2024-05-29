@@ -11,12 +11,11 @@ func subsets(nums []int) [][]int {
 	var backtracing func(start int)
 	backtracing = func(start int) {
 		for i := start; i < len(nums); i++ {
-			temp = nums[start : i+1]
-			fmt.Println(temp)
+			temp = append(temp, nums[i])
 			copylist := make([]int, len(temp))
 			copy(copylist, temp)
 			res = append(res, copylist)
-			backtracing(i + 1)
+			backtracing(i+1)
 			temp = temp[:len(temp)-1]
 		}
 		return

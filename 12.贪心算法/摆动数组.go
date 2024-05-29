@@ -17,7 +17,7 @@ func wiggleMaxLength(nums []int) int {
 	for i, j := 0, 1; j < len(nums)-1; {
 		prediff := nums[i+1] - nums[i]
 		postdiff := nums[j+1] - nums[j]
-		fmt.Println(prediff, postdiff)
+		//fmt.Println(prediff, postdiff)
 		if (prediff * postdiff) <= 0 {
 			res++
 			j++

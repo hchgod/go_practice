@@ -6,5 +6,5 @@ import (
 
 func main() {
     var result [][]int
-	temp := []int{}
+	
 }
