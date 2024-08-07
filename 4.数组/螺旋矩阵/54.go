@@ -55,7 +55,7 @@ func generateMatrix2(n int, m int) [][]int {
 }
 
 func main() {
-	n, m := 1, 2
+	n, m := 3, 4
 	res := generateMatrix2(n, m)
 	fmt.Print(res)
 }

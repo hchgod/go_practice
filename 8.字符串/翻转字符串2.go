@@ -14,7 +14,7 @@ func reverseStr(s string, k int) string {
 			swap(str[i:k+i])    //切片是开区间  左闭右开
 		}else if len(str[i:])<k {
 			swap(str[i:])
-		}	      
+		}
 	}
 	fmt.Println(string(str))
 	return string(str)

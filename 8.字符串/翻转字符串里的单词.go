@@ -9,7 +9,7 @@ func reverseWords(s string) (res string) {
 	for fast:=len(s)-1; fast>=0; fast-- {
 		if fast >0{
 			if s[fast] != ' ' && s[fast-1] == ' '{
-				left = fast		
+				left = fast
 			}else if s[fast] == ' ' && s[fast-1] != ' ' {
 				right = fast
 			}else if s[fast] == ' ' && s[fast-1] == ' '{

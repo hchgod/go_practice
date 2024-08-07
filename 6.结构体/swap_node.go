@@ -42,7 +42,7 @@ func swapPairs(head *ListNode) *ListNode {
 		cur1.Next.Next = cur2
 
 		cur1 = cur2
-		cur2 = cur2.Next 
+		cur2 = cur2.Next
 	}
 	return temphead.Next
 }

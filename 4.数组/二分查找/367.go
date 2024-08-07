@@ -20,7 +20,7 @@ func total_Sqrt(target int) bool {
 }
 
 func main() {
-	target := 1
+	target := 16
 	result := total_Sqrt(target)
 	fmt.Println(result)
 }

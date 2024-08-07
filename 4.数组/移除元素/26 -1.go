@@ -11,7 +11,7 @@ func removeDuplicate(nums []int) int {
 		if nums[fast] != nums[slow] {
 			count++
 			slow++
-			nums[slow] = nums[fast]						
+			nums[slow] = nums[fast]
 		}
 	}
 	nums = nums[:count]
