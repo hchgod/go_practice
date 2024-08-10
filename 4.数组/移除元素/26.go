@@ -1,4 +1,4 @@
-// 获取数组中去重后的长度
+// 获取数组中去重后的长度   删除有序数组中的重复项
 package main
 
 import(
@@ -12,7 +12,7 @@ func removeDuplicates(nums []int) int {
 		if nums[fast] != nums[slow] {
 			slow = fast
 			count++
-			continue			
+			continue
 		}
 	}
 	return count

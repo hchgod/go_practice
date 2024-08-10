@@ -1,5 +1,5 @@
 package main
-
+// 移除数组中重复的元素  删除有序数组中的重复项
 import(
 	"fmt"
 )
@@ -20,7 +20,7 @@ func removeDuplicate(nums []int) int {
 }
 
 func main() {
-	nums := []int{}
+	nums := []int{0,0,1,1,1,2,2,3,3,4}
 	nums_len := removeDuplicate(nums)
 	fmt.Println(nums_len)
 }
