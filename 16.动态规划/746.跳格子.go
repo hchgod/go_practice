@@ -1,5 +1,5 @@
 package main
-
+// 跳格子问题：一个人从第1个台阶跳到第n个台阶，每次可以跳1个或2个台阶，求最少需要多少分。
 import "fmt"
 
 func minCostClimbingStairs(cost []int) int {

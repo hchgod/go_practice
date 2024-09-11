@@ -41,9 +41,11 @@ func detectCycle(head *ListNode) *ListNode {
 				slow = slow.Next
 				head = head.Next
 			}
+			fmt.Println("有环")
 			return head
-		}		
+		}
 	}
+	fmt.Println("无环")
 	return nil
 }
 

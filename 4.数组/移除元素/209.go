@@ -1,5 +1,5 @@
 package main
-
+// 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的最短子数组，并返回其长度。
 import (
 	"fmt"
 )
