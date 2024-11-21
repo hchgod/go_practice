@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func getRightBorder(nums []int, target int) []int {
+func searchInsert(nums []int, target int) []int {
 	left, right := 0, len(nums)-1
 	for left <= right {
 		mid := left +(right-left) / 2
@@ -26,7 +26,7 @@ func getRightBorder(nums []int, target int) []int {
 func main() {
 	nums := []int{5,7,7,8,8,10}
 	target := 7
-	result := getRightBorder(nums, target)
+	result := searchInsert(nums, target)
 	fmt.Println(result)
 }
 

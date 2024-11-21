@@ -2,24 +2,18 @@ package main
 
 import "fmt"
 
-func function(n int) {
-	stone := []int{31,26,33,21,40}
-	half := Sum(stone)/2
+func lastStoneWeightII(stones []int) int {
+	half := Sum(stones)/2
 	dp := make([]int,half+1)
-	for i := 0; i < 5; i++{
+	for i := 0; i < len(stones); i++{
 		for j := half; j > 0; j--{
-			if j-stone[i] >= 0{
-				dp[j] = max(dp[j],dp[j-stone[i]]+stone[i])
+			if j-stones[i] >= 0{
+				dp[j] = max(dp[j],dp[j-stones[i]]+stones[i])
 			}
 		}
-		fmt.Println(dp[35:])
 	}
 	fmt.Println(dp)
-	return
-}
-
-func main() {
-	function(5)
+	return Sum(stones) - 2 * dp[half]
 }
 
 func Sum(arr []int) int {
@@ -28,4 +22,8 @@ func Sum(arr []int) int {
 		sum = sum + arr[i]
 	}
 	return sum
+}
+
+func main() {
+	lastStoneWeightII([]int{56,89,25})
 }

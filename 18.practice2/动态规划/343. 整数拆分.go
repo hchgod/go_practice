@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func function(n int) {
+func function(n int) int{
 	dp := make([]int, n+1)
 	dp[0] = 1
 	dp[1] = 1
@@ -16,7 +16,7 @@ func function(n int) {
 		}
 	}
 	fmt.Println(dp)
-	return
+	return dp[n]
 }
 
 func main() {

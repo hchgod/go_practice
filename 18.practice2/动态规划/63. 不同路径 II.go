@@ -2,15 +2,17 @@ package main
 
 import "fmt"
 
-func function(n int, m int) {
+func function() int {
 	obstacleGrid := [][]int{
 		{0, 0, 0},
 		{0, 1, 0},
 		{0, 0, 0},
 	}
-	dp := make([][]int, n)
+	dp := make([][]int, len(obstacleGrid))
+	n := len(obstacleGrid)
+	m := len(obstacleGrid[0])
 	for i := 0; i < n; i++ {
-		dp[i] = make([]int, m)
+		dp[i] = make([]int, len(obstacleGrid[i]))
 	}
 	for i := 0; i < m; i++ {
 		if obstacleGrid[0][i] == 1{
@@ -34,9 +36,9 @@ func function(n int, m int) {
 		}
 	}
 	fmt.Println(dp)
-	return
+	return dp[n-1][m-1]
 }
 
 func main() {
-	function(3, 3)
+	function()
 }
